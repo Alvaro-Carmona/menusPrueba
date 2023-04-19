@@ -1,0 +1,390 @@
+body {
+    font-size: 0.705rem;
+}
+
+.form-control, .form-select {
+    font-size: 0.705rem;
+}
+
+/* Estos estilos modifican el archor del sidebar*/
+#main-wrapper[data-layout=vertical][data-sidebartype=overlay] .left-sidebar {
+    left: -300px;
+}
+
+#main-wrapper[data-layout=vertical][data-sidebartype=overlay] .topbar .top-navbar .navbar-header {
+    width: 300px;
+}
+
+.sidebar-nav ul .sidebar-item {
+    width: 300px;
+}
+
+@media (max-width: 767px){
+    #main-wrapper[data-sidebartype=mini-sidebar] .left-sidebar, #main-wrapper[data-sidebartype=mini-sidebar] .left-sidebar .sidebar-footer {
+        left: -300px;
+    }
+}
+
+@media (max-width: 767px){
+    #main-wrapper.show-sidebar .left-sidebar, #main-wrapper.show-sidebar .left-sidebar .sidebar-footer {
+        left: 0;
+    }
+}
+
+.left-sidebar {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    padding-top: 64px;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 1px 0 20px rgb(0 0 0 / 8%);
+    transition: .2s ease-in;
+}
+
+
+/* Solo se cambio el tamaño de la 
+ * letra para los textos más grandes
+ * y no hacer más ancho el sidebar
+*/
+.sidebar-nav ul .sidebar-item .sidebar-link {
+    padding: 12px 15px;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    position: relative;
+    line-height: 25px;
+    font-size: 12px;
+    opacity: .6;
+    color: #fff;
+    border-left: 3px solid transparent;
+}
+
+/* anchor de las cabeceras de la tabla*/
+.table>:not(caption)>*>* {
+    /*padding: 0.0100rem 1rem;*/
+    padding: 0.0100rem 0.5rem;
+}
+
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
+    position: absolute;
+    bottom: 0.2em !important;
+    display: block;
+    opacity: 0.3;
+}
+
+/* Ajustamos el ordenamiento al nuevo anchor de las columnas */
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
+    position: absolute;
+    bottom: 0.5em;
+    display: block;
+    opacity: 0.3;
+}
+
+/* Opacidad del ordenamiento*/
+table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:after {
+    opacity: 1;
+}
+
+/*diseño del scroll horizontal*/
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 6px;     /* Tamaño del scroll en vertical */
+    height: 6px;    /* Tamaño del scroll en horizontal */
+}
+
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+::-webkit-scrollbar-thumb {
+    /*background: rgba(29, 37, 64, 0.7);*/
+    background: rgba(29, 37, 64, 0.7);
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0059be;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+::-webkit-scrollbar-thumb:active {
+    background-color: #0059be;
+}
+
+/*
+* modificación para resaltar el menú seleccionado 
+*/
+
+#sidebarnav > li.sidebar-item.selected > ul > li.sidebar-item.active > a{
+    opacity: 1 !important;
+    /*color: #1d2540 !important;*/
+    font-weight: 600 !important;
+}
+
+.btn-circle.btn-sm, .btn-group-sm>.btn-circle.btn {
+    width: 25px;
+    height: 25px;
+    padding: 8px 10px;
+    font-size: 12px;
+}
+
+
+.page-wrapper>.container-fluid, .page-wrapper>.container-lg, .page-wrapper>.container-md, .page-wrapper>.container-sm, .page-wrapper>.container-xl, .page-wrapper>.container-xxl {
+    /* padding: 20px; */
+    padding: 0px; 
+    min-height: calc(100vh - 180px);
+}
+
+.card-body {
+    flex: 1 1 auto;
+    /*padding: 1.25rem 1.25rem;*/
+    padding: 0.35rem 1.25rem;
+}
+
+/*
+ * Ocualta el icono de calendar 
+ * de todos los inputs readonly
+*/
+input[readonly]::-webkit-inner-spin-button,
+input[readonly]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+/*
+ * Ocualta el icono de calendar 
+ * de todos los inputs desabled
+*/
+input[disabled]::-webkit-inner-spin-button,
+input[disabled]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+
+
+
+
+/*----------------------------------------------------------------*/
+/* Los estilos globales van en esta seccion iniciando con gl-#### */
+/*----------------------------------------------------------------*/
+
+/*Secciones de coles */
+/* Color azul de la entidad de cobama */
+.gl-bg-azul{
+    background-color: #1d2540 !important;
+}
+
+.gl-cl-verde{
+    color: #5ac146;
+}
+
+.gl-cl-rojo{
+    color: #fa5838;
+}
+
+/*Seccion de alineacion */
+/* Alinea los numeros a la dercha */
+.gl-numero{
+    text-align: right;
+    padding-right: 1.2rem !important;
+}
+
+.gl-report-grid-tamanio-fijo{
+    height: 440px;
+    max-height: 440px;
+    overflow-x: auto;
+}
+/* Sepera un poco el texto de la izquierda */
+.gl-text-izquierda{
+    padding-left: 0.5rem !important;
+}
+
+/* para separar los botns del swal*/
+.gl-bt-margin-right-1rem{
+    margin-right: 1rem;
+}
+
+/* Alinea al centro */
+.gl-text-center{
+    text-align: center;
+}
+
+/* Alinea al centro */
+.gl-text-end{
+    text-align: end;
+}
+.gl-btn-abajo-derecha{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 10px;
+}
+
+.gl-aling-vertical-table{
+    vertical-align:  middle;
+}
+.gl-aling-vertical-table_height{
+    vertical-align:  middle;
+    height: 20px;
+}
+
+.gl-center-conten{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/*Seccion de tamaño de letra */
+/*Tamaño de letra large*/
+.gl-text-size-large{
+    font-size: large;
+}
+
+/*Tamaño de letra small*/
+.gl-text-size-small{
+    font-size: small;
+}
+
+/*tamaños de letra*/
+.gl-text-size-075rem{
+    font-size: 0.675rem;
+}
+
+/*tamaños de letra*/
+.btn-rounded{
+    font-size: 0.675rem;
+}
+
+/* Seccion del transformación de texto*/
+/*Mayusculas*/
+.gl-text-mayus{
+    text-transform: uppercase;
+}
+
+
+/* Seccion para los botones de accion dentro de las tabalas editr y eliminar*/
+.gl-btn-circle {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+    line-height: 19px;
+}
+
+
+/* contorno de color a los input select */
+
+.gl-input-rojo{
+    border-color: #fa5838;
+    padding-right: calc(1.5em + .75rem);
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.gl-input-verde{
+    border-color: #5ac146;
+    padding-right: calc(1.5em + .75rem);
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+
+/*desabilitado pero obligatorio*/
+
+.gl-redondly{
+    caret-color: transparent !important;
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+/*Altor de los input, select */
+.gl-element-height{
+    padding-left: 0.5rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-right: 0rem;
+    border: 1px solid #c5cacf;
+}
+
+/*Tamaño del icon dentro de la tabla*/
+.gl-icon-hover{
+    font-size: 15px;
+}
+
+.gl-baja-content-text{
+    padding-top: 0.4rem !important;
+}
+
+/*alineamo a la derecha los numeros input*/
+.gl-onli-num{
+    text-align: end;
+    padding-right: 1rem;
+}
+
+.gl-azul-degradado{
+    background: rgb(182,210,216);
+    background: linear-gradient(90deg, rgba(182,210,216,1) 0%, rgba(237,244,246,1) 42%, rgba(207,227,231,1) 100%);
+    color: #000000;
+}
+
+.gl-bg-amarillo-degradado{
+    background: rgb(250,243,203) !important;
+    background: linear-gradient(90deg, rgba(250,243,203,1) 0%, rgba(255,252,234,1) 42%, rgba(249,243,208,1) 100%) !important;
+    --bs-table-accent-bg: var(--bs-table-striped-bgs) !important;
+}
+
+.gl-bg-azul-degradado{
+    background: rgb(203, 237, 250) !important;
+    background: linear-gradient(90deg, rgba(203, 237, 250,1) 0%, rgba(203, 250, 248,1) 42%, rgba(203, 250, 248,1) 100%) !important;
+    --bs-table-accent-bg: var(--bs-table-striped-bgs) !important;
+    color: var(--bs-table-striped-color);
+}
+
+.gl-text-font-weight-500{
+    font-weight: 500;
+}
+
+.btn-outline-morado {
+    color: #8c9eff;
+    border-color: #8c9eff;
+}
+
+.btn-outline-morado:hover {
+    color: #fff;
+    background-color: #8c9eff;
+    border-color: #8c9eff;
+}
+
+.btn-check:active+.btn-outline-morado, .btn-check:checked+.btn-outline-morado, .btn-outline-morado.active, .btn-outline-morado.dropdown-toggle.show, .btn-outline-morado:active {
+    color: #fff;
+    background-color: #8c9eff;
+    border-color: #8c9eff;
+}
+
+.btn-check:focus+.btn-outline-morado, .btn-outline-morado:focus {
+    box-shadow: 0 0 0 0 rgb(148,140,84 / 50%);
+    
+}
+
+.gl-disable-element{
+    pointer-events: none;
+}
+
+.gl-margin-01rem{
+    margin: 0.1rem;
+}
+
+
+.btn:focus {
+    box-shadow: 0 0 2pt 1pt #719ECE;
+}
+
+.form-select:focus, .form-control:focus  {
+    box-shadow: 0 0 2pt 1pt #719ECE;
+}
